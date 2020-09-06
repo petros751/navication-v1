@@ -17,6 +17,14 @@ import { FooterComponent } from './shared/footer/footer.component';
 
 import { ComponentsModule } from './components/components.module';
 import { ExamplesModule } from './examples/examples.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { MatToolbarModule, MatIconModule, MatCardModule, MatButtonModule, MatProgressBarModule } from '@angular/material';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule} from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 export function LanguageLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -44,6 +52,14 @@ export function LanguageLoader(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatCardModule,
+    MatProgressBarModule,
+    MatMenuModule,
+    HttpClientModule
   ],
   providers: [
     TranslateConfigService
